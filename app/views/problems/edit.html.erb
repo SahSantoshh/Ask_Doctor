@@ -1,0 +1,8 @@
+<% provide(:page_title, "Edit #{@problem.title}") %>
+
+<h1>Editing Problem</h1>
+
+<%= render 'form', problem: @problem %>
+
+<%= link_to 'Show', @problem %> |
+<%= link_to 'Back', problems_path %>

@@ -1,0 +1,26 @@
+
+<div class="collapse" id="exCollapsingNavabar">
+	<div class="collapse-bg p-a-1">
+		<div class="card">
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">
+					<%= link_to 'Problem', root_path, class: "nav-link #{yield(:problem_active)}" %>
+				</li>
+				<li class="list-group-item">
+					<%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+				</li>
+				<li class="list-group-item">
+					<%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+				</li>
+			</ul>
+		</div>
+	</div>	
+</div>
+
+<nav class="navbar navbar-light bg-faded ">
+	<div class="container">
+		<a href="#" class="navbar-brand">		
+			Ask_<span class="light">Problem</span>
+		</a>
+	</div>
+</nav>
