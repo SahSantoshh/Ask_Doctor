@@ -1,0 +1,12 @@
+
+<div class="col-sm-6 col-lg-4">
+  <div class="card">
+    <!-- <div class="card-topper" style="background-image: url(http://image.shutterstock.com/display_pic_with_logo/97565/241533844/stock-photo-headache-migraine-people-doctor-woman-stressed-woman-nurse-doctor-with-migraine-headache-241533844.jpg);">  </div> -->
+      <div class="card-block">
+        <h3 class="card-title"> <%== link_to problem.title, problem %></h3>
+        <p class="published_date"><%= problem.display_day_published %> </p>
+        <p class="card-text"><%= truncate(problem.complaint, length: 130) %></p>
+        <%= link_to 'Read', problem, class: 'btn btn-read' %>
+      </div>
+  </div>
+</div>
