@@ -14,13 +14,25 @@
 				</li>
 			</ul>
 		</div>
-	</div>	
+	</div>
 </div>
 
 <nav class="navbar navbar-light bg-faded ">
 	<div class="container">
-		<a href="#" class="navbar-brand">		
-			Ask_<span class="light">Problem</span>
+		<a href="#" class="navbar-brand">
+			Ask_<span class="light">Doctor</span>
 		</a>
+		<button class="navbar-tooggler hidden-sm-up pull-xs-right" type="button" data-toogle="collapse" data-target="#exCollapsingNavabar">&#9776</button>
+		<ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+			<li class="nav-item">
+				<%= link_to 'Problem', root_path, class: "nav-link #{yield(:problem_active)}" %>
+			</li>
+			<li class="nav-item">
+				<%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+			</li>
+			<li class="nav-item">
+				<%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+			</li>
+		</ul>
 	</div>
 </nav>
