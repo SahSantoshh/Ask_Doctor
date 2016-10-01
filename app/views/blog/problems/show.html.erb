@@ -1,0 +1,16 @@
+<% provide(:page_title, @problem.title) %>
+<% provide(:problem_active, 'active') %>
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+    <h1><%= @problem.title %></h1>
+    <p><%= @problem.display_day_published %></p>
+    <h3 class="problem-h3" for="complaint">Complaints:</h3>
+    <textarea class="description"><%= @problem.complaint %></textarea>
+
+    <h3 class="problem-h3"for="examination">Examination:</h3>
+    <textarea ><%= @problem.examination %></textarea>
+
+    <h3 class="problem-h3"for="advice">Advice:</h3>
+    <textarea ><%= @problem.advice %></textarea>
+  </div>
+</div>
