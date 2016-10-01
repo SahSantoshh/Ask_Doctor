@@ -29,7 +29,7 @@ module User
 
       respond_to do |format|
         if @problem.save
-          format.html { redirect_to @problem, notice: 'Problem was successfully created.' }
+          format.html { redirect_to user_problem_path(@problem), notice: 'Problem was successfully created.' }
           format.json { render :show, status: :created, location: @problem }
         else
           format.html { render :new }
@@ -43,7 +43,7 @@ module User
     def update
       respond_to do |format|
         if @problem.update(problem_params)
-          format.html { redirect_to @problem, notice: 'Problem was successfully updated.' }
+          format.html { redirect_to user_problem_path(@problem), notice: 'Problem was successfully updated.' }
           format.json { render :show, status: :ok, location: @problem }
         else
           format.html { render :edit }
@@ -57,7 +57,7 @@ module User
     def destroy
       @problem.destroy
       respond_to do |format|
-        format.html { redirect_to problems_url, notice: 'Problem was successfully destroyed.' }
+        format.html { redirect_to user_problems_url, notice: 'Problem was successfully destroyed.' }
         format.json { head :no_content }
       end
     end

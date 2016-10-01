@@ -2,5 +2,13 @@
 <% provide(:user, 'active') %>
 
 <div class="row">
-  <%= render @problems %>
+  <div class="new_probl">
+    <%= link_to "New Problem", new_user_problem_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+  <table class="table table-striped">
+    <tr>
+      <th colspan="4">Title</th>
+    </tr>
+    <%= render @problems %>
+  </table>
 </div>
